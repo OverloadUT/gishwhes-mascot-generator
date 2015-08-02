@@ -29,6 +29,33 @@ var parts = {
       firstPartAdjective: ['fluffy', 'fuzzy', 'furry', 'cuddly', 'adorable', 'compact'],
       secondPart: 'head',
       secondPartAdjective: ['adorable', 'cute']
+    },
+    {
+      name: 'chicken',
+      prefix: 'chick',
+      suffix: 'cken',
+      firstPart: 'body',
+      firstPartAdjective: ['feathery', 'delicious', 'plump', 'white', 'brown'],
+      secondPart: 'beak',
+      secondPartAdjective: ['sharp', 'long']
+    },
+    {
+      name: 'snake',
+      prefix: 'sna',
+      suffix: 'ake',
+      firstPart: 'body',
+      firstPartAdjective: ['scaly', 'long', 'winding'],
+      secondPart: 'head',
+      secondPartAdjective: ['venomous', 'mesmerizing']
+    },
+    {
+      name: 'flamingo',
+      prefix: 'flami',
+      suffix: 'ingo',
+      firstPart: 'body',
+      firstPartAdjective: ['pink', 'feathered', 'ridiculous'],
+      secondPart: 'head',
+      secondPartAdjective: ['beaked', 'pink', 'absurd', 'awkward']
     }
   ]
 };
