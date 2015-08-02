@@ -57,6 +57,21 @@ var parts = {
       secondPart: 'head',
       secondPartAdjective: ['beaked', 'pink', 'absurd', 'awkward']
     }
+  ],
+  randomFacts: [
+      'it can fly in space',
+      'it poops steel ingots',
+      'it can only be seen by natural-born Norwegians',
+      'it is allergic to Celtic folk music',
+      'it can shoot lasers from its eyes',
+      'it only eats stuffed animals'
+  ],
+  randomFactReasons: [
+      'for some reason',
+      'and nobody knows why',
+      'ever since the incident',
+      'inexplicably',
+      'thanks to science'
   ]
 };
 
@@ -81,6 +96,11 @@ function getMascot() {
   mascot.name = pS(firstAnimal.prefix) + pS(secondAnimal.suffix);
   mascot.description = pS(firstAnimal.firstPartAdjective) + ' ' + pS(firstAnimal.firstPart) + ' of a ' + pS(firstAnimal.name) + ', ' +
       pS(secondAnimal.secondPartAdjective) + ' ' + pS(secondAnimal.secondPart) + ' of a ' + pS(secondAnimal.name) + '.';
+
+  mascot.factoid = '';
+  if(Math.random() < 0.2) {
+    mascot.factoid = 'also, ' + pS(parts.randomFacts) + ', ' + pS(parts.randomFactReasons);
+  }
 
   return mascot;
 }

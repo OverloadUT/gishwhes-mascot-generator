@@ -14,3 +14,13 @@ h1 {
 h2 {
   font-size: 6em;
 }
+
+h3 {
+  font-size: 5em;
+}
+
+footer {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
