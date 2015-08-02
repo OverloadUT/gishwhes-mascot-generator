@@ -2,10 +2,27 @@
 <html>
   <head>
     <title>{{title}}</title>
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/skeleton.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="/stylesheets/slabtext.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     {{{body}}}
   <footer>Created by Greg Laabs for <a href="https://www.gishwhes.com/">GISHWHES 2015</a> for the team <strong>MISHWHES</strong></footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/javascripts/jquery.slabtext.min.js"></script>
+    <script>
+        // Function to slabtext the H1 headings
+        function slabTextHeadlines() {
+            $(".slabme").slabText({
+                // Don't slabtext the headers if the viewport is under 380px
+                "viewportBreakpoint":380
+            });
+        }
+
+        slabTextHeadlines();
+    </script>
   </body>
 </html>

@@ -23,7 +23,7 @@ var parts = {
     },
     {
       name: 'wombat',
-      prefix: 'wom',
+      prefix: 'womba',
       suffix: 'bat',
       firstPart: 'body',
       firstPartAdjective: ['fluffy', 'fuzzy', 'furry', 'cuddly', 'adorable', 'compact'],
@@ -32,7 +32,7 @@ var parts = {
     },
     {
       name: 'chicken',
-      prefix: 'chick',
+      prefix: 'chicke',
       suffix: 'cken',
       firstPart: 'body',
       firstPartAdjective: ['feathery', 'delicious', 'plump', 'white', 'brown'],
@@ -42,7 +42,7 @@ var parts = {
     {
       name: 'snake',
       prefix: 'sna',
-      suffix: 'ake',
+      suffix: 'ke',
       firstPart: 'body',
       firstPartAdjective: ['scaly', 'long', 'winding'],
       secondPart: 'head',
@@ -51,15 +51,74 @@ var parts = {
     {
       name: 'flamingo',
       prefix: 'flami',
-      suffix: 'ingo',
+      suffix: 'ngo',
       firstPart: 'body',
       firstPartAdjective: ['pink', 'feathered', 'ridiculous'],
       secondPart: 'head',
       secondPartAdjective: ['beaked', 'pink', 'absurd', 'awkward']
+    },
+    {
+      name: 'shark',
+      prefix: 'sha',
+      suffix: 'rk',
+      firstPart: 'body',
+      firstPartAdjective: ['smooth', 'moist', 'sleek'],
+      secondPart: 'head',
+      secondPartAdjective: ['vicious', 'large', 'toothy', 'giant', 'terrifying']
+    },
+    {
+      name: 'turtle',
+      prefix: 'tu',
+      suffix: 'rtle',
+      firstPart: 'shell',
+      firstPartAdjective: ['hard', 'protective', 'domed', 'awesome'],
+      secondPart: 'head',
+      secondPartAdjective: ['snapping', 'dorky', 'silly-looking', 'retractable', 'surprisingly dangerous']
+    },
+    {
+      name: 'frog',
+      prefix: 'fro',
+      suffix: 'rog',
+      firstPart: 'body',
+      firstPartAdjective: ['green', 'slimy', 'amphibious', 'slick'],
+      secondPart: 'head',
+      secondPartAdjective: ['croaking', 'weird', 'mysterious']
+    },
+    {
+      name: 'dolphin',
+      prefix: 'dolphi',
+      suffix: 'phin',
+      firstPart: 'body',
+      firstPartAdjective: ['majestic', 'smooth', 'majestic'],
+      secondPart: 'head',
+      secondPartAdjective: ['majestic', 'silly', 'smiling']
+    },
+    {
+      name: 'aardvark',
+      prefix: 'aardva',
+      suffix: 'vark',
+      firstPart: 'body',
+      firstPartAdjective: ['burrowing', 'tough', 'arched'],
+      secondPart: 'head',
+      secondPartAdjective: ['unique', 'elongated', 'weird']
+    },
+    {
+      name: 'platypus',
+      prefix: 'platy',
+      suffix: 'pus',
+      firstPart: 'body',
+      firstPartAdjective: ['aquatic', 'furry'],
+      secondPart: 'head',
+      secondPartAdjective: ['ridiculous', 'duck-billed', 'very weird']
     }
   ],
   randomFacts: [
       'it can fly in space',
+      'it makes the best kale pancakes',
+      'it learned to tap dance watching Fred Astaire movies',
+      'it fully understands string theory',
+      'it has a collection of sasquatch memorabilia',
+      'it has a collection of sasquatch memorabilia',
       'it poops steel ingots',
       'it can only be seen by natural-born Norwegians',
       'it is allergic to Celtic folk music',
@@ -71,6 +130,7 @@ var parts = {
       'and nobody knows why',
       'ever since the incident',
       'inexplicably',
+      'but will never admit it',
       'thanks to science'
   ]
 };
@@ -94,13 +154,17 @@ function getMascot() {
   var mascot = {};
 
   mascot.name = pS(firstAnimal.prefix) + pS(secondAnimal.suffix);
-  mascot.description = pS(firstAnimal.firstPartAdjective) + ' ' + pS(firstAnimal.firstPart) + ' of a ' + pS(firstAnimal.name) + ', ' +
-      pS(secondAnimal.secondPartAdjective) + ' ' + pS(secondAnimal.secondPart) + ' of a ' + pS(secondAnimal.name) + '.';
+  mascot.description = [];
+  mascot.description[0] = pS(firstAnimal.firstPartAdjective) + ' ' + pS(firstAnimal.firstPart) + ' of a ' + pS(firstAnimal.name) + ', ';
+  mascot.description[1] = pS(secondAnimal.secondPartAdjective) + ' ' + pS(secondAnimal.secondPart) + ' of a ' + pS(secondAnimal.name) + '.';
 
-  mascot.factoid = '';
-  if(Math.random() < 0.2) {
-    mascot.factoid = 'also, ' + pS(parts.randomFacts) + ', ' + pS(parts.randomFactReasons);
+  mascot.factoid = [];
+  if(Math.random() < 0.7) {
+    mascot.factoid[0] = 'also, ' + pS(parts.randomFacts) + ', ';
+    mascot.factoid[1] =  pS(parts.randomFactReasons);
   }
+
+  console.log(mascot.description);
 
   return mascot;
 }

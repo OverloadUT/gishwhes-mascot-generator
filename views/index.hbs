@@ -1,3 +1,11 @@
-<h1>{{mascot.name}}</h1>
-<h2>{{mascot.description}}</h2>
-<h3>{{mascot.factoid}}</h3>
+<div class="h1container"><h1 class="slabme">{{mascot.name}}</h1></div>
+<h2 class="slabme">
+    {{#each mascot.description}}
+        <span class="slabtext">{{this}}</span>
+    {{/each}}
+</h2>
+<h3 class="slabme">
+    {{#each mascot.factoid}}
+        <span class="slabtext">{{this}}</span>
+    {{/each}}
+</h3>
