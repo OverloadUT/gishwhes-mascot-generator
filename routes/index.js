@@ -115,7 +115,6 @@ var parts = {
   randomFacts: [
       'it can fly in space',
       'it makes the best kale pancakes',
-      'it learned to tap dance watching Fred Astaire movies',
       'it fully understands string theory',
       'it has a collection of sasquatch memorabilia',
       'it has a collection of sasquatch memorabilia',
@@ -123,6 +122,7 @@ var parts = {
       'it can only be seen by natural-born Norwegians',
       'it is allergic to Celtic folk music',
       'it can shoot lasers from its eyes',
+      'it is radioactive',
       'it only eats stuffed animals'
   ],
   randomFactReasons: [
